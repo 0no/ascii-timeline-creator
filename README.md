@@ -1,88 +1,8 @@
-# ASCII Timeline Generator 📅
+# Gerador de Timeline ASCII 📅
 
-A Python program that generates an ASCII visual representation of event timelines, perfect for visualizing project schedules and activities.
+Um programa Python que gera uma representação visual em ASCII de uma timeline de eventos, ideal para visualização de cronogramas de projetos e atividades.
 
-## 🌟 Available in Two Languages
-
-- [English](#english)
-- [Português](#português)
-
-# English
-
-## 📋 Features
-
-- CSV file event reading
-- ASCII visualization with vertical separators
-- Support for different event statuses (Completed, In Progress, Not Started)
-- Delay indication with special markers
-- Start and end date display
-- Automatic event duration calculation
-- Timeline export to text file
-
-## 🔧 Requirements
-
-- Python 3.6 or higher
-- Standard library modules:
-  - datetime
-  - csv (optional, for CSV file reading)
-
-## 📁 Input File Format
-
-The input file should be a CSV file with the following columns:
-
-```
-Code,Team,Start Date,End Date,Status,Completion DateATV-001,CRM Squad,2023-11-25,2023-12-05,Completed,2023-12-05
-```
-
-### Required Columns:
-
-- **Code**: Unique activity identifier (e.g., ATV-001)
-- **Team**: Responsible team name
-- **Start Date**: Start date in YYYY-MM-DD format
-- **End Date**: Expected end date in YYYY-MM-DD format
-- **Status**: Current status (Completed, In Progress, Not Started)
-- **Completion Date**: Actual completion date (optional)
-
-## 🚀 How to Use
-
-1. Run the program:
-
-```
-python timeline_generator.py
-```
-
-1. Follow the prompts:
-
-- Enter input file name
-- Enter desired output file name
-
-## 📊 Timeline Legend
-
-- `|` : Day separator
-- `##`: Normal working days
-- `**`: Delayed days
-- ``  : Days without activity
-
-## 🎨 Output Example
-
-```
-Timeline: 2023-11-25 to 2023-12-23                     |25|26|27|28|29|30|01|02|03|04|05|ATV-001 (CRM Squad): |##|##|##|##|##|##|##|##|##|##|  | (5 days) - Completed [25/11 - 05/12]
-```
-
-## ⚠️ Error Handling
-
-The program includes handling for:
-
-- Input file not found
-- Invalid date format
-- Malformed lines in input file
-- Output file writing errors
-
----
-
-# Português
-
-## 📋 Funcionalidades
+## 📋 Características
 
 - Leitura de eventos a partir de arquivo CSV
 - Visualização em ASCII com separadores verticais
@@ -118,16 +38,13 @@ Código,Time,Data Inicial,Data Final,Status,Data FinalizaçãoATV-001,Squad CRM,
 
 ## 🚀 Como Usar
 
-1. Execute o programa:
-
-```
-python timeline_generator.py
-```
-
-1. Siga as instruções:
+1. python timeline_generator.py
+1. **Siga as instruções**:
 
 - Digite o nome do arquivo de entrada
 - Digite o nome do arquivo de saída desejado
+
+1. Timeline: 2023-11-25 até 2023-12-23                     |25|26|27|28|29|30|01|02|03|04|05|ATV-001 (Squad CRM): |##|##|##|##|##|##|##|##|##|##|  | (5 dias) - Concluído [25/11 - 05/12]
 
 ## 📊 Legenda da Timeline
 
@@ -139,7 +56,7 @@ python timeline_generator.py
 ## 🎨 Exemplo de Saída
 
 ```
-Timeline: 2023-11-25 até 2023-12-23                     |25|26|27|28|29|30|01|02|03|04|05|ATV-001 (Squad CRM): |##|##|##|##|##|##|##|##|##|##|  | (5 dias) - Concluído [25/11 - 05/12]
+Timeline: 2023-11-25 até 2023-12-23                     |25|26|27|28|29|30|01|02|03|04|05|ATV-001 (Squad CRM): |##|##|##|##|##|##|##|##|##|##|  | (5 dias) - Concluído [25/11 - 05/12]ATV-002 (Squad CRM): |  |  |  |  |  |  |  |  |##|##|##| (3 dias) - Em andamento [09/12 - 11/12]
 ```
 
 ## ⚠️ Tratamento de Erros
@@ -151,6 +68,21 @@ O programa inclui tratamento para:
 - Linhas mal formatadas no arquivo de entrada
 - Erros de escrita no arquivo de saída
 
+## 🤝 Contribuindo
+
+Sinta-se à vontade para:
+
+1. Reportar bugs
+1. Sugerir novas funcionalidades
+1. Enviar pull requests
+
+## 📝 Notas
+
+- As datas são exibidas no formato DD/MM para melhor legibilidade
+- A duração é calculada automaticamente em dias
+- O status "Atrasado" é atribuído automaticamente quando aplicável
+
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
